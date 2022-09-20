@@ -1,0 +1,28 @@
+ Q2) Explain ClassCastException with the help of the example.
+
+	Class Cast Exception is runtype exception raised in java when we try to cast a class from one type to another.
+	Example:
+					
+			class Bank{
+				String name;
+				String ifscCode;
+							
+				void printDetails(){
+					System.out.println(this.name+this.ifscCode)
+				}
+			 }
+					
+			class Axis extends Bank{}
+			class Sbi extends Bank{}
+
+			public class Main{
+						
+				public static void main(String[] args){
+					Bank axis = new Axis();
+					Sbi sbi = new Sbi();
+							
+					We can create axis,sbi Object with Axis,Sbi classes and Bank reference boz Axis,Sbi classes are child classes of Bank class
+					Axis axis1 = (Axis)axis;   // No problem won't throws any exception boz axis object is created with super class reference and child class object
+					Bank axis2 = (Axis)axis;   // this causes the Class cast exception 							
+				}
+			}
