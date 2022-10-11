@@ -1,0 +1,16 @@
+package com.masai.repositery;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.masai.entity.Tutorial;
+
+@Repository
+public interface TutorialRepositery extends JpaRepository<Tutorial, Integer> {
+
+//	public List<Tutorial> findByPublishedList(boolean b);
+//	
+//	public List<Tutorial> findByTitleTutorials(String title);
+}
